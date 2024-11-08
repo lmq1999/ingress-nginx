@@ -36,13 +36,13 @@ export NGINX_DIGEST_AUTH=v1.0.0
 export NGINX_SUBSTITUTIONS=e12e965ac1837ca709709f9a26f572a54d83430e
 
 # Check for recent changes: https://github.com/SpiderLabs/ModSecurity-nginx/compare/v1.0.3...master
-export MODSECURITY_VERSION=v1.0.3
+export MODSECURITY_VERSION=v1.0.1
 
 # Check for recent changes: https://github.com/SpiderLabs/ModSecurity/compare/v3.0.8...v3/master
-export MODSECURITY_LIB_VERSION=v3.0.12
+export MODSECURITY_LIB_VERSION=v3.0.13
 
 # Check for recent changes: https://github.com/coreruleset/coreruleset/compare/v3.3.5...v4.0/main
-export OWASP_MODSECURITY_CRS_VERSION=v4.4.0
+export OWASP_MODSECURITY_CRS_VERSION=v4.8.0
 
 # Check for recent changes: https://github.com/openresty/lua-nginx-module/compare/v0.10.26``...master
 export LUA_NGX_VERSION=v0.10.26
@@ -216,8 +216,8 @@ get_src f09851e6309560a8ff3e901548405066c83f1f6ff88aa7171e0763bd9514762b \
 get_src a98b48947359166326d58700ccdc27256d2648218072da138ab6b47de47fbd8f \
         "https://github.com/yaoweibin/ngx_http_substitutions_filter_module/archive/$NGINX_SUBSTITUTIONS.tar.gz" "ngx_http_substitutions_filter_module"
 
-get_src 32a42256616cc674dca24c8654397390adff15b888b77eb74e0687f023c8751b \
-        "https://github.com/SpiderLabs/ModSecurity-nginx/archive/$MODSECURITY_VERSION.tar.gz" "ModSecurity-nginx"
+get_src c435c5daa99e68128b20f5690ff6d4360103f675e102fa7d7b8e7ced7a946c43 \
+        https://github.com/lmq1999/ModSecurity-nginx/archive/refs/tags/$MODSECURITY_VERSION.tar.gz ModSecurity-nginx"
 
 get_src bc764db42830aeaf74755754b900253c233ad57498debe7a441cee2c6f4b07c2 \
         "https://github.com/openresty/lua-nginx-module/archive/$LUA_NGX_VERSION.tar.gz" "lua-nginx-module"
