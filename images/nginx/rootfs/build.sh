@@ -217,7 +217,7 @@ get_src a98b48947359166326d58700ccdc27256d2648218072da138ab6b47de47fbd8f \
         "https://github.com/yaoweibin/ngx_http_substitutions_filter_module/archive/$NGINX_SUBSTITUTIONS.tar.gz" "ngx_http_substitutions_filter_module"
 
 get_src c435c5daa99e68128b20f5690ff6d4360103f675e102fa7d7b8e7ced7a946c43 \
-        https://github.com/lmq1999/ModSecurity-nginx/archive/refs/tags/$MODSECURITY_VERSION.tar.gz ModSecurity-nginx"
+        "https://github.com/lmq1999/ModSecurity-nginx/archive/refs/tags/$MODSECURITY_VERSION.tar.gz" "ModSecurity-nginx"
 
 get_src bc764db42830aeaf74755754b900253c233ad57498debe7a441cee2c6f4b07c2 \
         "https://github.com/openresty/lua-nginx-module/archive/$LUA_NGX_VERSION.tar.gz" "lua-nginx-module"
