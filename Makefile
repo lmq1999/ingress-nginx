@@ -240,8 +240,8 @@ ensure-buildx:
 show-version:
 	echo -n $(TAG)
 
-PLATFORMS ?= amd64 arm arm64
-BUILDX_PLATFORMS ?= linux/amd64,linux/arm,linux/arm64
+PLATFORMS ?= amd64
+BUILDX_PLATFORMS ?= linux/amd64
 
 .PHONY: release # Build a multi-arch docker image
 release: ensure-buildx clean
@@ -253,7 +253,6 @@ release: ensure-buildx clean
 	docker buildx build \
 		--no-cache \
 		$(MAC_DOCKER_FLAGS) \
-		--push \
 		--pull \
 		--progress plain \
 		--platform $(BUILDX_PLATFORMS) \
@@ -266,7 +265,6 @@ release: ensure-buildx clean
 	docker buildx build \
 		--no-cache \
 		$(MAC_DOCKER_FLAGS) \
-		--push \
 		--pull \
 		--progress plain \
 		--platform $(BUILDX_PLATFORMS)  \

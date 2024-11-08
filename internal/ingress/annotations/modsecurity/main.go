@@ -49,13 +49,13 @@ var modsecurityAnnotation = parser.Annotation{
 		modesecTransactionIDAnnotation: {
 			Validator:     parser.ValidateRegex(parser.NGINXVariable, true),
 			Scope:         parser.AnnotationScopeIngress,
-			Risk:          parser.AnnotationRiskHigh,
+			Risk:          parser.AnnotationRiskLow,
 			Documentation: `This annotation enables passing an NGINX variable to ModSecurity.`,
 		},
 		modsecSnippetAnnotation: {
 			Validator:     parser.ValidateNull,
 			Scope:         parser.AnnotationScopeIngress,
-			Risk:          parser.AnnotationRiskCritical,
+			Risk:          parser.AnnotationRiskLow,
 			Documentation: `This annotation enables adding a specific snippet configuration for ModSecurity`,
 		},
 	},
