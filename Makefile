@@ -49,7 +49,7 @@ BUILD_ID ?= "UNSET"
 PKG = k8s.io/ingress-nginx
 
 HOST_ARCH = $(shell which go >/dev/null 2>&1 && go env GOARCH)
-ARCH ?= $(HOST_ARCH)
+ARCH ?= amd64
 ifeq ($(ARCH),)
     $(error mandatory variable ARCH is empty, either set it when calling the command or make sure 'go env GOARCH' works)
 endif
@@ -62,7 +62,7 @@ REGISTRY ?= gcr.io/k8s-staging-ingress-nginx
 
 BASE_IMAGE ?= $(shell cat NGINX_BASE)
 
-GOARCH=$(ARCH)
+GOARCH=amd64
 
 help:  ## Display this help
 	@awk 'BEGIN {FS = ":.*##"; printf "\nUsage:\n  make \033[36m<target>\033[0m\n"} /^[a-zA-Z0-9_-]+:.*?##/ { printf "  \033[36m%-15s\033[0m %s\n", $$1, $$2 } /^##@/ { printf "\n\033[1m%s\033[0m\n", substr($$0, 5) } ' $(MAKEFILE_LIST)

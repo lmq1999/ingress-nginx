@@ -42,7 +42,7 @@ export MODSECURITY_VERSION=v1.0.1
 export MODSECURITY_LIB_VERSION=v3.0.13
 
 # Check for recent changes: https://github.com/coreruleset/coreruleset/compare/v3.3.5...v4.0/main
-export OWASP_MODSECURITY_CRS_VERSION=v4.8.0
+export OWASP_MODSECURITY_CRS_VERSION=v1.0.0
 
 # Check for recent changes: https://github.com/openresty/lua-nginx-module/compare/v0.10.26``...master
 export LUA_NGX_VERSION=v0.10.26
@@ -373,7 +373,7 @@ echo "SecAuditLogStorageDir /var/log/audit/" >> /etc/nginx/modsecurity/modsecuri
 # Download owasp modsecurity crs
 cd /etc/nginx/
 
-git clone -b $OWASP_MODSECURITY_CRS_VERSION https://github.com/coreruleset/coreruleset
+git clone -b $OWASP_MODSECURITY_CRS_VERSION https://github.com/lmq1999/coreruleset
 mv coreruleset owasp-modsecurity-crs
 cd owasp-modsecurity-crs
 
